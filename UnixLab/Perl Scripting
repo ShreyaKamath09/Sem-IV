@@ -14,3 +14,17 @@ $surname=<>;
 print $surname."'s Residence. Welcome!";
 
 #given cost price and selling price calculate whether profit or loss
+#!/bin/perl
+print "Enter cost price:";
+$cp=<>;
+print "Enter selling price:";
+$sp=<>;
+$profit=$sp-$cp;
+if($profit>0)
+{
+        print "PROFIT=$profit";
+}
+else
+{
+        print "LOSS=$profit"
+}
