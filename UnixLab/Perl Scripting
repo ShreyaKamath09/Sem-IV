@@ -1,0 +1,16 @@
+#calculating exponent
+#!/bin/perl
+print "Enter base:";
+$base=<>;
+print "Enter exponent:";
+$exp=<>;
+$result=$base**$exp;
+print "Result:" . $result;
+
+#enter your username and display a name plate
+#!/bin/perl
+print "Enter surname:";
+$surname=<>;
+print $surname."'s Residence. Welcome!";
+
+#given cost price and selling price calculate whether profit or loss
