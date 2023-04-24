@@ -1,0 +1,11 @@
+##Take roll number as command line input and display it's multiplication table
+#vi rolltable.sh
+
+#!/bin/bash
+echo "Enter your roll no:"
+read n
+i=1
+for (( i+1; i<=10; i++ ))
+do
+        echo "$n x $i = $((n*i))"
+done
