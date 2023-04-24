@@ -1,0 +1,34 @@
+##file: bank.lst
+
+data:
+101 Aditya 0 14/11/2000 current
+102 Anil 10000 20/05/2011 saving
+103 Naman0 20/08/2009 current
+104 Ram 10000 15/08/2010 saving
+105 Jyotsna 5000 16/06/2012 saving
+106 Mukesh 14000 20/12/2009 Current
+107 Vishal 14500 30/11/2011 saving
+108 Chirag 0 15/12/2012 Current
+109 Arya 16000 14/12/2010 Current
+110 Priya 130 16/11/2009 Saving
+
+#displaying all content
+sed -n 'p' bank.lst
+
+#displaying line 4 to line 8
+sed -n '4,8p' bank.lst
+ 
+#displaying only line 4
+sed -n '4p' bank.lst
+
+#displaying top 4 lines
+sed '4q' bank.lst
+
+#displaying all records with savings account
+sed -n '/saving/p' bank.lst
+ 
+#filtering all records with current account to different file
+sed -n '/Current/p' bank.lst >CurrentAcc.lst
+ 
+#displaying the above file
+vi CurrentAcc.lst
