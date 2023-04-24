@@ -1,0 +1,33 @@
+##grep command
+
+#original file contents:
+#vi StudentRecords
+Roll no.  Batch   Surname  Firstname
+01        S11     Bafna    Abhigyan
+02        S11     Chavarkar Rudrani
+03        S12     Chowdhry  Maryam
+04        S12     Dohadwala Huzefa
+05        S13     Kamath    Shreya
+06        S13     Samberkar Jay
+07        S13     Joshi     Niranjan
+08        S14     Kapse     Meetali
+09        S14     Marathe   Darshil
+10        S14     Kamath    Shaunak
+
+#displaying all S13 students
+ grep S13 StudentRecords
+ 
+#displaying all S12 students
+grep S12 StudentRecords
+
+#displaying roll number 8
+grep 08 StudentRecords
+
+#displaying all students with surname Kamath 
+grep Kamath StudentRecords
+
+#transferring all students with surname Kamath to another file
+grep Kamath StudentRecords>Kamath1.txt
+
+#displaying that file
+vi Kamath1.txt
