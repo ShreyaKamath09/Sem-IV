@@ -1,0 +1,35 @@
+##Area and Perimeter of rectangle
+#vi rectangle.sh
+
+#!/bin/bash
+echo "Enter length of rectangle:"
+read L
+echo "Enter breadth of rectangle:"
+read B
+area=$(($L * $B))
+peri=$((2*($L+$B)))
+echo "Area = $area and Perimeter = $peri"
+
+#run-command: bash rectangle.sh
+
+##Area and Perimeter of Equilateral Triangle
+#vi eqtriangle.sh
+
+#!/bin/bash
+echo "Enter length of side:"
+read side
+area=$(echo "scale=2; (sqrt(3)/4)*$side^2"|bc)
+peri=$(echo "$side*3"|bc)
+echo "Area is: $area and Perimeter is: $peri"
+
+##Counting number of lines, words and characters in a file
+#vi count.sh
+
+#!/bin/bash
+echo "StudentData File Count"
+echo "No. of lines:"
+wc -l StudentData
+echo "No. of words:"
+wc -w StudentData
+echo "No. of Characters:"
+wc -m StudentData
