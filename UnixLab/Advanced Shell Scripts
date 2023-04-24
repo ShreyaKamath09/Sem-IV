@@ -9,3 +9,32 @@ for (( i+1; i<=10; i++ ))
 do
         echo "$n x $i = $((n*i))"
 done
+
+##input first name and surname using cmd, make directory with surname within directory, 
+create a file with firstname.c containing a message 'welcome'. compile it using gcc 
+and execute it.
+#vi dir1.sh
+
+#!/bin/bash
+
+#input of first name and surname from cmd
+echo "Enter your first name:"
+read firstname
+echo "Enter your surname:"
+read surname
+
+#creating directory with the surname 
+mkdir -p "$surname"
+
+#C file with the firstname.c
+echo "#include <stdio.h>
+int main() {
+    printf(\"Welcome, $firstname!\");
+    return 0;
+}" > "$surname/$firstname.c"
+
+#compiling using gcc
+gcc "$surname/$firstname.c" -o "$surname/$firstname"
+
+#execution
+"$surname/$firstname"
