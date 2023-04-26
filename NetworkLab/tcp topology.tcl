@@ -28,7 +28,7 @@ set tcp [new Agent/TCP]
 $tcp attach-agent $n0 $tcp
 
 set sink [new Agent/TCPSink]
-$sink attach-agent $n3 $tcp
+$sink attach-agent $n3 $sink
 
 $ns connect $tcp $sink
 
