@@ -16,9 +16,9 @@ int 03h
 
 end
 
-steps to run: 
+to run: 
 td memory.exe
-go to view: dump
+view: dump
 enter 4 numbers
 press f9 or run
 go to other memory location
